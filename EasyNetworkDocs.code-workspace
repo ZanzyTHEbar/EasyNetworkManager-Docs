@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "name": "Source",
+      "path": "./vitepress"
+    },
+    {
+      "name": "Root",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "cSpell.words": [
+      "flexbugs",
+      "flexsearch",
+      "maneger",
+      "palenight",
+      "roadmap",
+      "vitepress"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "easynetworkmanager_docs",
+  "version": "1.0.0",
+  "description": "Official Docs for EasyNetworkManager",
+  "repository": "https://github.com/ZanzyTHEbar/EasyNetworkManager",
+  "author": "DaOfficialWizard",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs",
+    "lint": "eslint --ext .js,.ts,.jsx,.tsx src",
+    "format": "pnpm run lint --fix & pnpm prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "update-deps": "pnpm up -Li"
+  },
+  "devDependencies": {
+    "@types/flexsearch": "^0.7.4",
+    "flexsearch": "^0.7.31",
+    "markdown-it": "^13.0.1",
+    "postcss": "^8.4.30",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^9.1.4",
+    "tailwindcss": "^3.3.3",
+    "vitepress": "1.0.0-rc.20",
+    "vue": "^3.3.4"
+  }
+}
