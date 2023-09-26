@@ -7,7 +7,7 @@ import { alerts } from '../../static/alerts'
 
 # Building and uploading the firmware manually {.text-[var(--font-accent)]}
 
-Uploading your firmware must initially be done over cable. Once you have the tracker connected to your WiFi after your first firmware update, you can opt to use [OTA](#how-do-i-use-it) in the future.
+<!-- Uploading your firmware must initially be done over cable. Once you have the tracker connected to your WiFi after your first firmware update, you can opt to use [OTA](#how-do-i-use-it) in the future.
 
 ## 1. Connect your tracker to your PC
 
@@ -212,4 +212,4 @@ If you encountered an issue while following these steps check the [FAQ.](../misc
 
 If you don't find an answer to your question there ask in **#questions** channel in [the discord](https://discord.gg/kkXYbVykZX), we will be happy to help.
 
-*Adapted from the SlimeVR docs, Some Credit goes to the SlimeVR team [here](https://docs.slimevr.dev/firmware/setup-and-install.html)*
+*Adapted from the SlimeVR docs, Some Credit goes to the SlimeVR team [here](https://docs.slimevr.dev/firmware/setup-and-install.html)* -->
