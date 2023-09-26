@@ -1,14 +1,10 @@
 //https://vitepress.vuejs.org/config/theme-configs
 //https://vitepress.vuejs.org/guide/theme-nav#navigation-links
-
 import type { DefaultTheme } from "vitepress";
-import { inBrowser, useData } from "vitepress";
-import { watchEffect, h } from "vue";
-import Theme from "vitepress/theme";
 
 //import MyLayout from '../../vue/MyLayout.vue'
 
-const theme: DefaultTheme.Config = {
+const customTheme: DefaultTheme.Config = {
   /* logo: {
     light: "/logo_light.png",
     dark: "/logo.svg",
@@ -82,23 +78,4 @@ const theme: DefaultTheme.Config = {
   ],
 };
 
-const ThemeSettings = {
-  Layout: () => {
-    return h(Theme.Layout, null, {
-      // https://vitepress.vuejs.org/guide/extending-default-theme#layout-slots
-    });
-  },
-  setup() {
-    const { lang } = useData();
-    watchEffect(() => {
-      if (inBrowser) {
-        document.cookie = `nf_lang=${lang.value}; expires=Mon, 1 Jan 2024 00:00:00 UTC; path=/`;
-      }
-    });
-  },
-  async enhanceApp({ app, router, siteData }) {
-    // ...
-  },
-};
-
-export { theme, ThemeSettings };
+export { customTheme };

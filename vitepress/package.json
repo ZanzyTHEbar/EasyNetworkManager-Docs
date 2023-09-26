@@ -1,8 +1,8 @@
 {
   "name": "easynetworkmanager_docs",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Official Docs for EasyNetworkManager",
-  "repository": "https://github.com/ZanzyTHEbar/EasyNetworkManager",
+  "repository": "https://github.com/ZanzyTHEbar/EasyNetworkManager-Docs.git",
   "author": "DaOfficialWizard",
   "license": "MIT",
   "private": true,
@@ -16,8 +16,6 @@
     "update-deps": "pnpm up -Li"
   },
   "devDependencies": {
-    "@types/flexsearch": "^0.7.4",
-    "flexsearch": "^0.7.31",
     "markdown-it": "^13.0.1",
     "postcss": "^8.4.30",
     "postcss-flexbugs-fixes": "^5.0.2",
@@ -25,5 +23,13 @@
     "tailwindcss": "^3.3.3",
     "vitepress": "1.0.0-rc.20",
     "vue": "^3.3.4"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search",
+        "search-insights"
+      ]
+    }
   }
 }

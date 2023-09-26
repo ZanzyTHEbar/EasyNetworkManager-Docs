@@ -1,6 +1,6 @@
 // .vitepress/config.ts
 import { defineConfig } from "vitepress";
-import { theme } from "../src/custom/theme";
+import { customTheme } from "../src/custom/theme";
 
 export default defineConfig({
   outDir: "./.vitepress/dist",
@@ -26,5 +26,5 @@ export default defineConfig({
   lastUpdated: true,
   title: "EasyNetworkManager Docs",
   description: "Official documentation for the EasyNetworkManager Library.",
-  themeConfig: theme   
+  themeConfig: customTheme,
 });
