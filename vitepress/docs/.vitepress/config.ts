@@ -8,6 +8,8 @@ export default defineConfig({
   // Note: This is not available on Github Pages - only on Netlify and Vercel
   // https://vitepress.dev/guide/routing#generating-clean-url
   //cleanUrls: true,
+  //! required for GitHub Pages to work without a custom domain
+  base: "/EasyNetworkManager-Docs/",
   ignoreDeadLinks: true,
   head: [
     [
