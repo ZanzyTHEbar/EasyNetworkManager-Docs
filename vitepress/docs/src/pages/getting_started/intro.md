@@ -20,9 +20,7 @@ Open source networking library for Espressif Chip-sets via `TCP` and `UDP` proto
 
 Built on-top of [ESPAsyncWebServer](https://github.com/me-no-dev/ESPAsyncWebServer), with logical and efficient abstraction layers for ease of use.
 
-Plug and play API for custom RESTful APIs.
-
-This library is in-progress for easy network management.
+Plug-and-Play C++ API for custom RESTful APIs.
 
 This project supports the following boards:
 
@@ -38,7 +36,7 @@ This library fully supports `M5Stack` devices.
 This library provides an embedded WiFiManager html front-end on a customizable URL endpoint.
 
 ::: tip Tip
-This feature can be turned off in favour of your own custom front-end.
+This feature can be turned off in favour of your own [custom front-end](/library_guide/custom_html_files).
 :::
 
 <ImageCard :options="image_settings.wifi_manager"/>
@@ -52,6 +50,8 @@ This library provides numerous key features:
 - automatically creating an Access Point if connecting to a wifi network fails
 - mDNS support
 - Async OTA support
+  - OTA endpoint
+- Sync OTA support
 - customizable REST API
 - WebSockets
 

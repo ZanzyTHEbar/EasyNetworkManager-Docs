@@ -5,7 +5,7 @@
 ### Software is not final
 
 Bugs can and will occur which may hinder the experience or useability at times.
-Do not expect 100% reliable and perfect function. Not all features are fully developed yet, though 90% of features work reliably in our testing.
+Do not expect 100% reliable and perfect function in a production scenario. Not all features are fully developed yet, though 90% of features work reliably in our testing.
 
 ### Firmware may have user difficulties
 

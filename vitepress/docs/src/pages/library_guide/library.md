@@ -19,7 +19,7 @@ If you like to install the bleeding edge, you can also use the github repo direc
 This is optional, and is considered bad practice in production, but is useful to get the newest features. It is recommended to use the `Platformio Registry` instead.
 :::
 
-Add the following:
+If you choose to go down the direct-ink router - Add the following to your `platformio.ini` file:
 
 ```ini
 lib_deps = 
@@ -28,7 +28,9 @@ lib_deps =
 
 ### Arduino IDE
 
-To install this library in your Arduino IDE, you must add all dependencies manually (sorry) and then download this repository as a zip file and add it as any other library :smile:.
+To install this library in your Arduino IDE, you must add all dependencies manually (sorry) and then download this repository as a zip file.
+
+Next, add the zip-file as any other library :smile:.
 
 ::: tip Help Wanted
 If you wish to make the installation of this library more ergonomic for Arduino IDE users, please make a pull request!
@@ -59,17 +61,19 @@ You _may_ need to install `ESP8266WiFi` if the compiler complains about it, but 
 ## Configuration
 
 ::: warning
-It is **required** to add a `build flag` to your setup for the code to function properly.
+It is **required** to add a `build flag` to you the project for the code to function properly.
 :::
 
 For `platformio`
+
+Add this to your `platformio.ini` file:
 
 ```ini
 build_flags = 
   -DASYNCWEBSERVER_REGEX ; add regex support to AsyncWebServer
 ```
 
-Optionally you can enable the wifi manager here as well:
+Optionally you can enable use of the wifi manager api here as well:
 
 ```ini
 build_flags = 
@@ -101,7 +105,7 @@ The text to add is:
 compiler.cpp.extra_flags=-DASYNCWEBSERVER_REGEX=1
 ```
 
-Optionally you can enable the wifi manager here as well:
+Optionally you can enable use of the wifi manager api here as well:
 
 ```txt
 compiler.cpp.extra_flags=-DASYNCWEBSERVER_REGEX=1 -DUSE_WEBMANAGER=1

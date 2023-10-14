@@ -10,20 +10,46 @@ In the `mDNS` protocol the IP address of the device can change, but the name of 
 
 ### Enable mDNS
 
-The `mDNS` is enabled by default on the new firmware, and can not be disabled.
+The `mDNS` is enabled by instantiating the `MDNSManager` class and calling it's `begin()` method. This will enable the `mDNS` protocol on the device.
+
+::: info **Note**
+The mDNS Manager is used to create a mDNS service for the device
+The mDNS Manager constructor takes seven parameters:
+
+1. A pointer to the config manager
+2. The service name
+3. The service instance name
+4. The service protocol
+5. The service description
+6. The service port
+::: warning Caution
+Service name and service protocol have to be lowercase and begin with an underscore - soon we will add parsing to the class to make sure this is the case. For now you must do this manually.
+:::
+:::
+
+```cpp
+MDNSHandler mDNS(configHandler.config, 
+                 "_easynetwork", 
+                 "test", 
+                 "_tcp",
+                 "_api_port", 
+                 "80");
+mDNS.begin();
+```
 
 To use it, all you need to do is set the name of the device in the firmware config file.
 
-This setting can be located under the `[wifi]` section of the `ini/user_config.ini` file.
-
-```ini
-mdnsname = "openiristracker" # do not add .local
+```cpp
+// The config manager constructor takes two (optional) parameters: 
+// 1. The name of the project (used to create the config file name) 
+// 2. The hostname for your device on the network(used for mDNS and OTA)
+ConfigHandler configHandler("easynetwork", MDNS_HOSTNAME);
 ```
 
-By default, the name of the device is `openiristracker`, however you can change it to whatever you want.
+By default if you provide no MDNS name to the config constructor the name of the device is set to `easynetwork`, however you can change it to whatever you want using the REST API at runtime.
 
 ::: warning Change the name
-Since you have two ESP32 devices, you need to make sure that the name of the device is different for each device. If you do not change the name of the device, you will not be able to connect to both devices at the same time.
+If you have more than one ESP device on the same network you need to make sure that the hostname of the device is different for each device. If you do not change the name of the device, you will not be able to connect to both devices at the same time and there will be routing conflicts.
 :::
 
 ### Connect to the device
@@ -32,9 +58,11 @@ To connect to the device, you need to use the name of the device followed by `.l
 
 ## Prerequisites `Bonjour`
 
-`Bonjour` is required to use the `mDNS` protocol _for windows and mac only_. If you are using Windows, you can download Bonjour from [here](https://support.apple.com/kb/DL999?locale=en_US). If you are using macOS, Bonjour is already installed.
+`Bonjour` is required to use the `mDNS` protocol _for windows 10 and mac only_. If you are using Windows, you can download Bonjour from [here](https://support.apple.com/kb/DL999?locale=en_US). If you are using macOS, Bonjour is already installed.
 
-You can also get the fully tested Bonjour package from us [here](https://github.com/RedHawk989/EyeTrackVR/tree/GUI/GUI/assets/3rdParty) (for Windows only).
+If you are using windows 11, you should already have mdns features.
+
+You can also get the fully tested Bonjour package from us [here](https://github.com/EyeTrackVR/SolidGUI/GUI/assets/3rdParty) (for Windows only).
 
 ## Troubleshooting
 
