@@ -11,8 +11,6 @@ import { alerts } from '../../static/alerts'
 
 For basic usage examples please see the [examples](https://github.com/ZanzyTHEbar/EasyNetworkManager/tree/main/NetworkManager/examples) folder.
 
-<!-- To use the provided wifi manager html page you don't need to do anything except for set a `define` before you include the library header (for `pio` users see the [Extras](#extras) section) -->
-
 ## Using the WiFi Manager {.text-[var(--font-accent)]}
 
 <ImageCard :options="image_settings.wifi_manager"/>
